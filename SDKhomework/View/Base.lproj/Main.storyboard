@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Google View Controller-->
+        <scene sceneID="T8Y-J5-nKn">
+            <objects>
+                <viewController id="gxi-b9-Ncb" customClass="GoogleViewController" customModule="SDKhomework" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LIZ-Vm-Oib">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Привет, человек!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLG-Vl-FfH">
+                                <rect key="frame" x="20" y="95" width="335" height="42"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ktP-0Z-GBR">
+                                <rect key="frame" x="98.5" y="202" width="178" height="41"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ktP-0Z-GBR" secondAttribute="height" multiplier="178:41" id="8GV-sO-QIs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Выход">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="signOutButtonTapped:" destination="gxi-b9-Ncb" eventType="touchUpInside" id="naR-Jo-izE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="P9i-1c-vTn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vLG-Vl-FfH" secondAttribute="trailing" constant="20" id="Bpn-Ik-sL4"/>
+                            <constraint firstItem="vLG-Vl-FfH" firstAttribute="top" secondItem="P9i-1c-vTn" secondAttribute="top" constant="95" id="GMP-8R-hyO"/>
+                            <constraint firstItem="ktP-0Z-GBR" firstAttribute="centerX" secondItem="P9i-1c-vTn" secondAttribute="centerX" id="U56-L3-6hi"/>
+                            <constraint firstItem="ktP-0Z-GBR" firstAttribute="top" secondItem="vLG-Vl-FfH" secondAttribute="bottom" constant="65" id="UpG-1P-UyY"/>
+                            <constraint firstItem="ktP-0Z-GBR" firstAttribute="width" secondItem="LIZ-Vm-Oib" secondAttribute="width" multiplier="0.474667" id="hO9-zx-Hze"/>
+                            <constraint firstItem="vLG-Vl-FfH" firstAttribute="leading" secondItem="P9i-1c-vTn" secondAttribute="leading" constant="20" id="tId-eZ-MR9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="helloLabel" destination="vLG-Vl-FfH" id="Xdv-bR-p2f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WYV-z7-jiK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="780" y="-206"/>
+        </scene>
+        <!--Facebook View Controller-->
+        <scene sceneID="RSP-s5-BH7">
+            <objects>
+                <viewController id="Vev-9I-Wc3" customClass="FacebookViewController" customModule="SDKhomework" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tnI-Nd-m1J">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="KqY-qs-Nne"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qj0-dQ-dFf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="780" y="477"/>
+        </scene>
+        <!--Auth View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="AuthViewController" customModule="SDKhomework" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Авторизация" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICW-9x-c79">
+                                <rect key="frame" x="59" y="96" width="257.5" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите удобный для Вас способ:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMf-ag-t5r">
+                                <rect key="frame" x="74" y="146" width="227" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ICW-9x-c79" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="2wr-j6-zOC"/>
+                            <constraint firstItem="ICW-9x-c79" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="96" id="VmZ-f0-oqr"/>
+                            <constraint firstItem="dMf-ag-t5r" firstAttribute="top" secondItem="ICW-9x-c79" secondAttribute="bottom" constant="2" id="XsX-fh-r7f"/>
+                            <constraint firstItem="dMf-ag-t5r" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sk3-ZD-dOz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="gxi-b9-Ncb" kind="presentation" identifier="googleSegue" modalPresentationStyle="fullScreen" id="ODc-im-VJg"/>
+                        <segue destination="Vev-9I-Wc3" kind="presentation" identifier="fbSegue" modalPresentationStyle="fullScreen" id="X8U-RI-9j9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4" y="54"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

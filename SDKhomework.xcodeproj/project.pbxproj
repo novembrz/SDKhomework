@@ -16,7 +16,8 @@
 		C243E08F25D688C50013EE2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C243E08D25D688C50013EE2D /* LaunchScreen.storyboard */; };
 		C250781E25D68B3C001815B1 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = C250781D25D68B3C001815B1 /* credentials.plist */; };
 		C250782825D68EC2001815B1 /* GoogleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C250782725D68EC2001815B1 /* GoogleViewController.swift */; };
-		C250782D25D692D9001815B1 /* FacebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C250782C25D692D8001815B1 /* FacebookViewController.swift */; };
+		C276070125D6946400F971EB /* FacebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C276070025D6946400F971EB /* FacebookViewController.swift */; };
+		C293F67125D6F0DD007683D6 /* FbCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C293F67025D6F0DD007683D6 /* FbCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +34,9 @@
 		C243E09025D688C50013EE2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C250781D25D68B3C001815B1 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 		C250782725D68EC2001815B1 /* GoogleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleViewController.swift; sourceTree = "<group>"; };
-		C250782C25D692D8001815B1 /* FacebookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookViewController.swift; sourceTree = "<group>"; };
+		C276070025D6946400F971EB /* FacebookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookViewController.swift; sourceTree = "<group>"; };
+		C276070425D6975900F971EB /* SDKhomework.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SDKhomework.entitlements; sourceTree = "<group>"; };
+		C293F67025D6F0DD007683D6 /* FbCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FbCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +80,7 @@
 		C243E08125D688C40013EE2D /* SDKhomework */ = {
 			isa = PBXGroup;
 			children = (
+				C276070425D6975900F971EB /* SDKhomework.entitlements */,
 				C243E09825D688D90013EE2D /* Applications */,
 				C243E09A25D688E10013EE2D /* Controllers */,
 				C243E09B25D688E90013EE2D /* View */,
@@ -110,7 +114,8 @@
 			children = (
 				C243E08625D688C40013EE2D /* AuthViewController.swift */,
 				C250782725D68EC2001815B1 /* GoogleViewController.swift */,
-				C250782C25D692D8001815B1 /* FacebookViewController.swift */,
+				C276070025D6946400F971EB /* FacebookViewController.swift */,
+				C293F67025D6F0DD007683D6 /* FbCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -267,7 +272,8 @@
 			files = (
 				C243E08725D688C40013EE2D /* AuthViewController.swift in Sources */,
 				C250782825D68EC2001815B1 /* GoogleViewController.swift in Sources */,
-				C250782D25D692D9001815B1 /* FacebookViewController.swift in Sources */,
+				C276070125D6946400F971EB /* FacebookViewController.swift in Sources */,
+				C293F67125D6F0DD007683D6 /* FbCell.swift in Sources */,
 				C243E08325D688C40013EE2D /* AppDelegate.swift in Sources */,
 				C243E08525D688C40013EE2D /* SceneDelegate.swift in Sources */,
 			);
@@ -417,6 +423,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SDKhomework/SDKhomework.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R367V6SP7Z;
 				INFOPLIST_FILE = "$(SRCROOT)/SDKhomework/Supporting files/Info.plist";
@@ -437,6 +444,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SDKhomework/SDKhomework.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R367V6SP7Z;
 				INFOPLIST_FILE = "$(SRCROOT)/SDKhomework/Supporting files/Info.plist";

@@ -8,5 +8,6 @@ target 'SDKhomework' do
   # Pods for SDKhomework
 
 pod 'GoogleSignIn'
+pod 'FBSDKLoginKit'
 
 end

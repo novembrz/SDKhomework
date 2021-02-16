@@ -7,6 +7,7 @@
 
 import UIKit
 import GoogleSignIn
+import FBSDKLoginKit
 
 class AuthViewController: UIViewController {
     
@@ -15,17 +16,33 @@ class AuthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSignInGoogleButton()
+        setupSignInFacebookButton()
     }
-    
+        
     private func setupSignInGoogleButton() {
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance()?.restorePreviousSignIn()
         
-        let googleButton = GIDSignInButton(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
-        googleButton.center = view.center
+        let googleButton = GIDSignInButton()
+        googleButton.frame = CGRect(x: 32, y: 250, width: view.frame.width - 64, height: 50)
         view.addSubview(googleButton)
     }
+    
+    private func setupSignInFacebookButton(){
+        
+        let fbButton = FBLoginButton()
+        fbButton.frame = CGRect(x: 32, y: 320, width: view.frame.width - 64, height: 40)
+        view.addSubview(fbButton)
+        
+        fbButton.delegate = self
+        
+        if let token = AccessToken.current, !token.isExpired { // User is logged in, do work such as go to next view controller.
+            print("Facebook: \(token)")
+        }
+        fbButton.permissions = ["public_profile", "email", "user_friends"]
+    }
+    
     
     //MARK: Navigation
     
@@ -72,3 +89,24 @@ extension AuthViewController: GIDSignInDelegate {
     }
 }
 
+//MARK: - FB LoginButtonDelegate
+
+extension AuthViewController: LoginButtonDelegate {
+    
+    func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
+        
+        if let error = error {
+            print(error)
+            return
+        }
+        
+        guard AccessToken.isCurrentAccessTokenActive else { return }
+        print("Successfully logged in with facebook...")
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
+        print("Did log out of facebook")
+    }
+    
+    
+}

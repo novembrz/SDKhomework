@@ -56,21 +56,6 @@
             </objects>
             <point key="canvasLocation" x="780" y="-206"/>
         </scene>
-        <!--Facebook View Controller-->
-        <scene sceneID="RSP-s5-BH7">
-            <objects>
-                <viewController id="Vev-9I-Wc3" customClass="FacebookViewController" customModule="SDKhomework" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tnI-Nd-m1J">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="KqY-qs-Nne"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Qj0-dQ-dFf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="780" y="477"/>
-        </scene>
         <!--Auth View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -103,12 +88,65 @@
                     </view>
                     <connections>
                         <segue destination="gxi-b9-Ncb" kind="presentation" identifier="googleSegue" modalPresentationStyle="fullScreen" id="ODc-im-VJg"/>
-                        <segue destination="Vev-9I-Wc3" kind="presentation" identifier="fbSegue" modalPresentationStyle="fullScreen" id="X8U-RI-9j9"/>
+                        <segue destination="EVG-pP-qxW" kind="presentation" identifier="fbSegue" modalPresentationStyle="fullScreen" id="AD9-c2-Nsu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-4" y="54"/>
+        </scene>
+        <!--Facebook View Controller-->
+        <scene sceneID="XMz-9W-5H6">
+            <objects>
+                <tableViewController id="EVG-pP-qxW" customClass="FacebookViewController" customModule="SDKhomework" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9JK-BC-pa3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="We3-aN-dQ9">
+                            <rect key="frame" x="0.0" y="138" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" systemColor="systemRedColor"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" title="Выход">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="fbCell" rowHeight="82" id="u25-vl-Oz7" customClass="FbCell" customModule="SDKhomework" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="82"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u25-vl-Oz7" id="ILV-tb-sEr">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="82"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEt-xC-BhG">
+                                            <rect key="frame" x="16" y="30" width="343" height="22"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="TEt-xC-BhG" firstAttribute="trailing" secondItem="ILV-tb-sEr" secondAttribute="trailingMargin" id="5gB-Uv-nq9"/>
+                                        <constraint firstItem="TEt-xC-BhG" firstAttribute="leading" secondItem="ILV-tb-sEr" secondAttribute="leadingMargin" id="AuI-Ny-alY"/>
+                                        <constraint firstItem="TEt-xC-BhG" firstAttribute="centerY" secondItem="ILV-tb-sEr" secondAttribute="centerY" id="vfq-uA-RBW"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="friendsLabel" destination="TEt-xC-BhG" id="0wv-hz-q8X"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="EVG-pP-qxW" id="Emo-dI-oOR"/>
+                            <outlet property="delegate" destination="EVG-pP-qxW" id="mqq-w2-J9c"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8md-6t-lLB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="780" y="474.51274362818594"/>
         </scene>
     </scenes>
     <resources>
